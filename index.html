@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lec14.css">
+    <script src="lec14.js"></script>
+    <style>
+#a2{
+    width: 30%;
+    height: 50vh;
+    background-color: rgba(139, 231, 86, 0.419);
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px red;
+}
+label{
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 15px;
+}
+#m{
+    width: 40vh;
+    height: 5vh;
+    background-color: brown;
+    border-radius: 10px;
+
+}
+h1{
+    text-align: center;
+}
+button{
+    width: 15vh;
+    height: 5vh;
+    margin-left: 40px;
+    background-color:green;
+    border-radius:10px ;
+
+}
+#rmk{
+    width: 35vh;
+    height: 5vh;
+    background-color: blue;
+    border-radius: 10px;
+}
+#res{
+    width: 35vh;
+    height: 5vh;
+    background-color:yellow;
+    border-radius: 10px;
+}
+
+
+
+    </style>
+    
+</head>
+ <body>
+    <div id="a2">
+     <h1> Granding System</h1> 
+        <label> Marks:</label>
+        <input id="m" type="text"><br><br>
+        <button type="button" onclick="grade()">Cheak Grade</button><br><br>
+        <label> Grade:</label>
+        <input id="res" type="text"><br><br>
+        <label> Result:</label>
+        <input id="rmk" type="text" ><br><br>
+</div>
+<script>
+    function grade(){
+    let Marks=document.getElementById("m").value
+    let result1=""
+    let remark=""
+    if(Marks>=90 && Marks<=100){
+        result1="Grade A"
+        remark="Excellent!"
+    }
+    else if(Marks>=80 && Marks<=89){
+        result1="Grade B"
+        remark="Very Good!"
+    }
+    else if(Marks>=70 && Marks<=79){
+        result1="Grade C"
+        remark="Good!"
+    }
+    else if(Marks>=60 && Marks<=69){
+        result1="Grade D"
+        remark="nice!"
+    }
+        else if(Marks>=40 && Marks<=49){
+        result1="Grade E"
+        remark="Achha!"
+    }
+    else if(Marks>100){
+        result1="Invalid Number"
+        remark="Chutiya"
+    }
+    else{
+        result1="Grade F"
+        remark="Fail!"
+    }
+    document.getElementById("res").value=result1
+    document.getElementById("rmk").value=remark
+    document.getElementById("m").value=""
+}
+
+
+</script>
+</body>
+</html>
